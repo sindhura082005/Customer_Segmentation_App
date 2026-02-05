@@ -1,2 +1,2 @@
-# Customer_Segmentation_App
+# Customer Segmentation & Analytics Platform
 Streamlit-based customer segmentation using KMeans
