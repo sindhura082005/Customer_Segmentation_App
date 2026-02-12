@@ -1,37 +1,83 @@
-## Customer Segmentation & Analytics Platform- K Means
+# Customer Segmentation & Analytics Platform
 
-An **end-to-end customer segmentation project** built using **Python, Machine Learning, and Streamlit**.  
-This application allows users to upload customer data and automatically segment customers into meaningful groups using a **pre-trained K-Means clustering model**, with PCA-based visualizations and downloadable results.
+An end-to-end Unsupervised Machine Learning pipeline for intelligent customer segmentation using multiple clustering algorithms, automated model evaluation, PCA-based visualization, and deployment via Streamlit.
 
 ---
 
 ## 🚀 Project Overview
 
-Customer segmentation helps businesses understand customer behavior and design targeted marketing strategies.  
-This project demonstrates the complete analytics pipeline:
+Businesses often struggle to identify distinct customer groups based on purchasing behavior and demographics.  
+This project builds a production-ready ML pipeline that segments customers into meaningful clusters using advanced unsupervised learning techniques.
 
-- Data preprocessing & feature engineering  
-- Unsupervised learning using K-Means  
-- Dimensionality reduction with PCA  
-- Deployment as an interactive Streamlit application  
+The system includes:
 
----
-
-## ✨ Key Features
-
-- Upload CSV or Excel customer datasets  
-- Automatic customer segmentation using K-Means  
-- Advanced feature engineering (Age, Family Size, Total Spend, etc.)  
-- PCA-based cluster visualization  
-- Cluster-level summary insights  
-- Download segmented customer data  
+- Data preprocessing & feature engineering
+- Multi-model clustering comparison
+- Automated model selection framework
+- PCA-based dimensionality reduction
+- Interactive Streamlit deployment
+- Downloadable segmented outputs
 
 ---
 
 ## 🧠 Problem Statement
 
-Businesses often struggle to identify distinct customer groups based on behavior and demographics.  
-This project solves that problem by clustering customers using purchasing patterns, engagement metrics, and demographic features—enabling **data-driven decision making**.
+Segment customers based on demographic and behavioral data to enable:
+
+- Targeted marketing strategies
+- Personalized offers
+- Revenue optimization
+- Customer retention planning
+
+---
+
+## ⚙️ ML Pipeline Architecture
+
+1. Data Cleaning & Preprocessing
+   - Missing value handling
+   - IQR-based outlier treatment
+   - Correlation-based feature reduction
+
+2. Feature Engineering
+   - Age calculation from Year_Birth
+   - TotalSpend aggregation
+   - FamilySize computation
+   - IsPartner binary feature
+
+3. Feature Scaling
+   - StandardScaler for normalization
+
+4. Dimensionality Reduction
+   - PCA (95% variance retention)
+   - PCA loadings analysis
+
+5. Clustering Algorithms Compared
+   - KMeans
+   - Agglomerative Clustering
+   - DBSCAN
+   - Gaussian Mixture Models
+   - MiniBatch KMeans
+
+6. Model Evaluation Metrics
+   - Silhouette Score
+   - Davies-Bouldin Index
+   - Calinski-Harabasz Score
+   - Custom ranking-based model selection
+
+7. Deployment
+   - Streamlit-based interactive web app
+   - Real-time dataset upload
+   - Cluster summary insights
+   - Downloadable segmented CSV output
+
+---
+
+## 📊 Results
+
+- Segmented 2,240 customers into 4 distinct behavioral clusters
+- Achieved optimal Silhouette Score of 0.23 using KMeans
+- Reduced 32 features to 21 principal components while retaining 95% variance
+- Automated model comparison framework improved selection reliability
 
 ---
 
@@ -48,52 +94,47 @@ This project solves that problem by clustering customers using purchasing patter
 | requirements.txt             | Python dependencies required to run the project |
 
 
+
+---
+
+## 🛠 Tech Stack
+
+- Python
+- Pandas, NumPy
+- Scikit-Learn
+- PCA
+- Matplotlib
+- Streamlit
+- Pickle
+
+---
+
+## 📈 Key Highlights
+
+- Built a reusable ML pipeline for unsupervised segmentation
+- Implemented automated multi-model comparison framework
+- Designed cluster-level business insights dashboard
+- Production-ready deployment with serialized model artifacts
+
+---
+
+## 🎯 Business Impact
+
+- Identifies high-value vs budget-conscious customer segments
+- Enables data-driven marketing decisions
+- Improves campaign targeting efficiency
+- Supports revenue growth strategies
+
+---
+
+## 🚀 How to Run
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
 --
-
-## 🛠️ Tech Stack
-
-- Python  
-- Pandas, NumPy  
-- Scikit-learn (K-Means, PCA, StandardScaler)  
-- Matplotlib  
-- Streamlit  
-- Jupyter Notebook  
-
----
-
-## 🔄 Workflow
-
-1. Upload customer dataset (CSV / Excel)  
-2. Data preprocessing and feature engineering  
-3. Feature scaling using StandardScaler  
-4. Dimensionality reduction with PCA  
-5. Customer segmentation using K-Means  
-6. Visualization and cluster summary  
-7. Download segmented output  
-
----
-
-## 📊 Model Details
-
-- **Algorithm:** K-Means Clustering  
-- **Preprocessing:** StandardScaler  
-- **Dimensionality Reduction:** PCA  
-- **Saved Artifacts:**  
-  - `kmeans_model.pkl`  
-  - `scaler.pkl`  
-
-The trained model and scaler are loaded directly into the Streamlit app for real-time predictions.
-
----
-## 📈 Output
-
-- Cluster-wise customer summary table
-- PCA-based 2D visualization of customer clusters
-- Downloadable CSV file with assigned customer segments
-
-  <img width="957" height="454" alt="cs1" src="https://github.com/user-attachments/assets/1a2696bd-cc60-4ef7-a805-b454239f921b" />
-  <img width="1379" height="1050" alt="cs2" src="https://github.com/user-attachments/assets/78b62b4f-fbae-40bc-9ce8-fb0d23c1b9b9" />
-
+<img width="1600" height="759" alt="image" src="https://github.com/user-attachments/assets/063de9e4-99d0-46bd-9a5b-d9e082afc929" />
+<img width="1379" height="1050" alt="image" src="https://github.com/user-attachments/assets/23f5703a-cc30-49b6-b7af-c9954ad98332" />
 
 
 
