@@ -125,6 +125,7 @@ Segment customers based on demographic and behavioral data to enable:
 - Dependency management using requirements.txt
 - Version-controlled project structure for collaborative development
 - Production-ready Streamlit interface for real-time inference
+---
 
 ## 🎯 Business Impact
 
